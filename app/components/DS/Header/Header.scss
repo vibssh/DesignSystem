@@ -1,0 +1,39 @@
+// -----------------------------------------------------------------------------
+// Component  : Header styles
+// Created on : 3/3/2019 15:08:35
+// Created by : Vaibhav Shringarpure
+// -----------------------------------------------------------------------------
+
+.header {
+  background: $hm-black;
+  border-bottom: 10px solid;
+  border-color: $hm-grey-1;
+  padding: 20px 0 0;
+  width: 100%;
+}
+
+.logo-link {
+  font-weight: $base-font-weight;
+  margin: 0;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+
+  &:hover {
+    border-color: $hm-white;
+  };
+}
+
+.logo {
+  display: inline-block;
+  height: 30px;
+  margin-right: 20px;
+  vertical-align: middle;
+  width: 30px;
+}
+
+.title {
+  color: $hm-brand-colour;
+  display: inline-block;
+  margin: 0;
+  vertical-align: middle;
+}

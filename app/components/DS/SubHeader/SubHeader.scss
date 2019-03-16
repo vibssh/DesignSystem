@@ -1,0 +1,26 @@
+// -----------------------------------------------------------------------------
+// Component  : SubHeader styles
+// Created on : 3/3/2019 16:38:27
+// Created by : Vaibhav Shringarpure
+// -----------------------------------------------------------------------------
+
+.subheader {
+  background: $hm-grey-3;
+  display: block;
+  padding-top: 20px;
+}
+
+.subheaderList {
+  display: inline-block;
+  margin-bottom: 0;
+
+  a {
+    font-weight: $bold-font-weight;
+    margin-right: 40px;
+    padding-bottom: 10px;
+  }
+}
+
+.subheaderLink {
+  margin-bottom: 0;
+}
