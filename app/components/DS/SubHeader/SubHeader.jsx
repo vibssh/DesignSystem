@@ -12,6 +12,7 @@ import Styles from './SubHeader.scss';
 
 import List from '../../Common/List/List';
 
+
 /* Functional Component Function below */
 const SubHeader = props => {
   //Define your Methods Here
@@ -19,13 +20,19 @@ const SubHeader = props => {
   //Returns JSX below
   return (
     <div className={[Styles.subheader].join(' ')}>
-      <ul className="container">
-        <List
-          listArray={data.subheader}
-          listClassName={Styles.subheaderList}
-          listLinkClassName={Styles.subheaderLink}
-        />
-      </ul>      
+      <div className="container">
+        <div className="row">
+          <div className="col-12">
+            <ul>
+              <List
+                listArray={data.subheader}
+                listClassName={Styles.subheaderList}
+                listLinkClassName={Styles.subheaderLink}
+              />
+            </ul>
+          </div>
+        </div>
+      </div>        
     </div>
   );
 };

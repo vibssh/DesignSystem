@@ -24,6 +24,7 @@
     border: 0;
     height: 1px;
     margin: 20px 0;
+    width: 100%;
 
     &.no-background {
       background: transparent;
@@ -32,6 +33,16 @@
 
   .row--spacing {
     margin: 20px 0;
+
+    &-top {
+      margin: 0;
+      margin-top: 20px;
+    }
+
+    &-bottom {
+      margin: 0;
+      margin-bottom: 20px;
+    }
   }
 
   .container {
@@ -44,6 +55,18 @@
 
     @include breakpoint('large') {
       margin: 0 auto;
+    }
+  }
+
+  section {
+    padding: 20px 0;
+
+    @include breakpoint('small') {
+      padding: 30px 0;
+    }
+
+    + section {
+      padding-top: 0;
     }
   }  
 }

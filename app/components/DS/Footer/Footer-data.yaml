@@ -1,5 +1,5 @@
-# Data for   : SubHeader Component
-# Created on : 3/3/2019 16:38:27
+# Data for   : Footer Component
+# Created on : 17/3/2019 17:24:37
 # Created by : Vaibhav Shringarpure
 
 # sample YAML Data
@@ -11,13 +11,3 @@
 #     - tennis
 #     - golf
 #   attributes: { Handed: Left , BirthPlace: Home } - This is object
-subheader:
-  - id: 1
-    key: Getting Started
-    url: started
-  - id: 2
-    key: Styles
-    url: styles
-  - id: 3
-    key: Components
-    url: components

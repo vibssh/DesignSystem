@@ -62,6 +62,10 @@ module.exports = {
     path: __dirname + '/build'
   },
 
+  devServer: {
+    historyApiFallback: true,
+  },
+
   plugins: [
     HTMLWebpackPluginConfig,
     new MiniCssExtractPlugin({

@@ -16,6 +16,7 @@ $line-height-s-desktop: 1.25;
 $line-height-l-desktop: 1.31579;
 
 /* Font-sizes */
+$font-size-small: 14px;
 $font-size-base-mobile: 16px;
 $font-size-base-desktop: 19px;
 
@@ -50,29 +51,37 @@ $font-size-h4-desktop: 19px;
 
     /* Paragraph Styles - p tag */
     p {
-    @include remsize(font-size, $font-size-base-mobile);
-    line-height: $line-height-l-mobile;
-    margin-bottom: 15px;
-
-    @include breakpoint('small') {
-      @include remsize(font-size, $font-size-base-desktop);
-      line-height: $line-height-l-desktop;
-      margin-bottom: 20px;
-    }
-
-    // Lead Paragraph
-
-    &.lead {
-      @include remsize(font-size, $font-size-lead-mobile);
-      line-height: $line-height-s-mobile;
-      margin-bottom: 20px;
+      @include remsize(font-size, $font-size-base-mobile);
+      line-height: $line-height-l-mobile;
+      margin-bottom: 15px;
 
       @include breakpoint('small') {
-        @include remsize(font-size, $font-size-lead-desktop);
-        line-height: $line-height-s-desktop;
-        margin-bottom: 30px;
+        @include remsize(font-size, $font-size-base-desktop);
+        line-height: $line-height-l-desktop;
+        margin-bottom: 20px;
       }
-    }
+
+      // Lead Paragraph
+
+      &.lead {
+        @include remsize(font-size, $font-size-lead-mobile);
+        line-height: $line-height-s-mobile;
+        margin-bottom: 20px;
+
+        @include breakpoint('small') {
+          @include remsize(font-size, $font-size-lead-desktop);
+          line-height: $line-height-s-desktop;
+          margin-bottom: 30px;
+        }
+      }
+
+      // Small Text
+
+      &.small {
+        @include remsize(font-size, $font-size-small);
+        line-height: $line-height-s-mobile;
+        margin-bottom: 20px;
+      }
     }
 
     /* Headings */
@@ -150,7 +159,7 @@ $font-size-h4-desktop: 19px;
         border-color: $hm-link-hover-colour;
         color: $hm-link-hover-colour;
       }
-
+      
       &:visited {
         border-color: $hm-link-visited-colour;
         color: $hm-link-visited-colour;
@@ -160,6 +169,36 @@ $font-size-h4-desktop: 19px;
         color: $hm-link-active-colour;
         outline: 3px solid $hm-focus-colour;
         outline-offset: 0;
+      }
+
+      &.active {
+        border-color: $hm-link-active-colour;
+        color: $hm-link-active-colour;
+      }
+
+      /* Link Button */
+      &.link-btn {
+        background: $hm-orange;
+        color: $hm-white;
+        padding: 15px;
+        transition: all .2s linear;
+
+        &:hover, &:active, &:focus {
+          background: $hm-white;
+          border-color: $hm-black;
+          color: $hm-orange;
+        };
+
+        &--reverse {
+          background: $hm-white;
+          color: $hm-orange;
+
+          &:hover, &:active, &:focus {
+            background: $hm-orange;
+            color: $hm-white;
+
+          };
+        }
       }
     }
 
@@ -176,10 +215,14 @@ $font-size-h4-desktop: 19px;
         line-height: $line-height-s-desktop;
         margin-bottom: 5px;
       }
+
+      a {
+        margin-bottom: 0;
+      }
     }
 
     &.bulleted {
-      padding-left: 20px;
+      padding-left: 5px;
 
       li {
         list-style: disc;
@@ -191,7 +234,7 @@ $font-size-h4-desktop: 19px;
     /* Ordered List */
 
     ol {
-    padding-left: 20px;
+    padding-left: 5px;
     li {
       @include remsize(font-size, $font-size-base-mobile);
       line-height: $line-height-l-mobile;

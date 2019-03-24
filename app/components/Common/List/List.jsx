@@ -5,9 +5,9 @@
 
 /* Import Statement Below */
 import React from 'react';
+import {NavLink} from 'react-router-dom';
 import PropTypes from 'prop-types';
 
-// import Button from '../Button/Button';
 
 /* Type Checking for PropTypes */
 const propTypes = {
@@ -26,46 +26,30 @@ const defaultProps = {
     listLinkClassName: ''
 };
 
-let hrefLink = '#';
+const removeFocus = (e) => {
+  e.currentTarget.blur();
+}
 
-/* Functional Component Function below */
-const List = props => {
-  //Define your Methods Here
-  let itemList = null;
-
+const List = (props) => {
+  let listItem = null;
   if (props.listArray.length) {
-      
-      itemList = props.listArray.map((list, index) => {
-
-      const getObjectKeys = Object.keys(list, (k) => {
-           return list[k][0];
-      });
-
-      const getObjectValue = Object.values(list, (v) => {
-          return list[v];
-      })
-
-      const kValue = Array.prototype.forEach.call(getObjectKeys, (g) => {
-          return g;
-      })
-
-      const keyValue = (kValue ==='id') ? kValue : index;
-
+    listItem = props.listArray.map((list, index) => {
+      console.log(list);
+    const keyVal = (list.id) ? list.id : index;
       return (
-        <li key={keyValue} className={props.listClassName}>
-          {/*<Button buttonText={list.key} />*/}
-          <a href={hrefLink} title={getObjectValue[1]} className={props.listLinkClassName}>
-            {getObjectValue[1]}
-          </a>
+        <li key={keyVal} className={props.listClassName}>
+          <NavLink to={`/${list.url}`} activeClassName="active" onClick={removeFocus}>{list.key}</NavLink>
         </li>
       );
     });  
   }
-  
 
-  //Returns JSX below
-  return <React.Fragment>{itemList}</React.Fragment>;
-};
+  return (
+    <React.Fragment>
+      {listItem}
+    </React.Fragment>
+  )
+}
 
 List.propTypes = propTypes; // from Line 13
 List.defaultProps = defaultProps; // from Line 22

@@ -21,6 +21,8 @@ const appType = argv['_'][1] ? argv['_'][1].toLowerCase() : '';
 const destFolder =
   appType === 'ds'
     ? './app/components/DS/'
+    : appType === 'pages'
+    ? './app/components/Pages/'
     : './app/components/Library/';
 
 const navFolder = './app/components/DS/Navigation/'

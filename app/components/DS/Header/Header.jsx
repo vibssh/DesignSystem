@@ -7,6 +7,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import HeaderStyles from './Header.scss';
+import { Link } from 'react-router-dom'
 
 import Icon from '../../../assets/icons/Logo.svg';
 
@@ -35,12 +36,17 @@ const Header = props => {
       <header className={HeaderStyles.header}>
        
           <div className="container">
-            <a href="/" title={props.title} className={HeaderStyles['logo-link']}>
-              <img src={Icon} alt={props.title} className={HeaderStyles.logo} />
-              <h3 className={HeaderStyles.title}>{props.title}</h3>
-            </a>
-          </div>
-        
+            <div className="row">
+              <div className="col-12">
+          
+                <Link to="/" title={props.title} className={HeaderStyles['logo-link']}>
+                  <img src={Icon} alt={props.title} className={HeaderStyles.logo} />
+                  <h3 className={HeaderStyles.title}>{props.title}</h3>
+                </Link>
+                
+              </div>
+            </div>            
+          </div>        
       </header>
 
       <SubHeader />

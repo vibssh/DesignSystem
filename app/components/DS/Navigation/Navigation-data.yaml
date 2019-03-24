@@ -17,3 +17,5 @@ navigation:
        key: Introduction
      - id: 2
        key: Box
+     - id: 3
+       key: Home
