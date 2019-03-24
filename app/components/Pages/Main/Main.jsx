@@ -14,20 +14,21 @@ import Styles from '../../DS/Styles/Styles';
 import Components from '../../DS/Components/Components';
 import NotFound from '../../DS/NotFound/NotFound';
 
-
+const homeTitle = "Design your service using DS styles and components"
 
 const Main = () => {
   return (
     <main>
       <Switch>          
-        <Route exact path='/' component = {Home}></Route>
-        <Route path='/started' component = {Started}></Route>
-        <Route path='/styles' component = {Styles}></Route>
-        <Route path='/components' component = {Components}></Route>
+        <Route exact path='/' render = {() => <Home title={homeTitle} />} />
+        <Route path='/started' render = {() => <Started />} />
+        <Route path='/styles' render = {() => <Styles />} />
+        <Route path='/components' render = {() => <Components />} />
         <Route component = {NotFound}></Route>
       </Switch>
     </main>
   )
 }
+
 
 export default Main;

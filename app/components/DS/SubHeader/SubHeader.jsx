@@ -5,13 +5,9 @@
 
 /* Import Statement Below */
 import React from 'react';
-
 import data from './SubHeader-data.yaml';
-
 import Styles from './SubHeader.scss';
-
 import List from '../../Common/List/List';
-
 
 /* Functional Component Function below */
 const SubHeader = props => {

@@ -33,14 +33,15 @@ class Components extends Component {
   //Render Method returning JSX
   render() {
     return (
-      <div className="container">
-        <div className="row">
-          <div className="col-12">
-            <h1>{this.props.title}</h1>
+      <section>
+        <div className="container">
+          <div className="row">
+            <div className="col-12">
+              <h1>{this.props.title}</h1>
+            </div>
           </div>
         </div>
-      </div>
-
+      </section>      
     );
   }
 }

@@ -27,7 +27,8 @@ const Started = props => {
   //Returns JSX below
   return (
 
-    <React.Fragment>
+    <section>
+
     <div className="container">
       <div className="row">
         <div className="col-12">
@@ -35,7 +36,7 @@ const Started = props => {
         </div>
       </div>
     </div>
-    </React.Fragment>
+    </section>
 
   );
 };

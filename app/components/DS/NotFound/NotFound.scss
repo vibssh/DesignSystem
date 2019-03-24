@@ -4,3 +4,24 @@
 // Created by : Vaibhav Shringarpure
 // -----------------------------------------------------------------------------
 
+.not-found {
+
+  .text {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+
+  .image {
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+
+    img {
+      display: block;
+      margin: 0 auto;
+      width: 80%;
+    }
+  }
+
+}
