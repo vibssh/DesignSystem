@@ -5,7 +5,7 @@
   "main": "main.js",
   "scripts": {
     "build": "webpack --mode production",
-    "start": "webpack-dev-server --host 0.0.0.0 --port 3000 --open --mode development",
+    "dev": "webpack-dev-server --host 0.0.0.0 --port 3000 --open --mode development",
     "create": "node -e 'require(\"./main\").createComponent()'",
     "empty": "node -e 'require(\"./main\").emptyDirectory()'",
     "watcher": "node -e 'require(\"./main\").watcher()'",

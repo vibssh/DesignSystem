@@ -6,6 +6,7 @@
 /* Import Statement Below */
 import React from 'react';
 import MastHead from '../MastHead/MastHead';
+import {NavLink} from 'react-router-dom';
 /* Functional Component Function below */
 const Home = props => {
   //Define your Methods Here
@@ -26,7 +27,7 @@ const Home = props => {
                 Make your styles look uniform like DS.UK with guides for applying layout, typography,
                 colour and images.
               </p>
-              <a href="/styles" title="Browse Styles">Browse Styles</a>
+              <NavLink to="/styles" title="Browse Styles">Browse Styles</NavLink>
             </div>
 
             <div className="col-6">
@@ -35,7 +36,7 @@ const Home = props => {
                 Save time with reusable, accessible components for forms, navigation, panels, icons,
                 tables and more.
               </p>
-              <a href="/components" title="Browse Components">Browse Components</a>
+              <NavLink to="/components" title="Browse Components">Browse Components</NavLink>
             </div>            
           </div>
           <div className="row row--spacing row--spacing-top">
